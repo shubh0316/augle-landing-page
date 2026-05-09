@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Augle — Augmented deliberation",
-  description: "Join the Augle beta waitlist.",
+  title: "Augle — Augmented Deliberation",
+  description: "AI-powered prediction market research and deliberation platform",
+  icons: {
+    icon: "/fav.png",
+  },
 };
 
 export default function RootLayout({
