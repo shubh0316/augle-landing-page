@@ -14,8 +14,8 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Augle — Augmented Deliberation",
-  description: "AI-powered prediction market research and deliberation platform",
+  title: "Augle",
+  description: "Augmented deliberation",
   icons: {
     icon: "/fav.png",
   },

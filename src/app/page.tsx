@@ -62,7 +62,7 @@ export default function Home() {
             </form>
           )}
 
-          <p className="text-gray-500 text-xs text-center mt-3">
+          <p className="text-[#F7F6F2] text-xs text-center mt-3">
             No spam, no sharing, no selling. Just your invite when we&apos;re ready.
           </p>
         </div>
