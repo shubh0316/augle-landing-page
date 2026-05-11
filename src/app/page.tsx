@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import logo from "./assets/logo.png";
+import emailIcon from "./assets/email-icon.png";
+import substackIcon from "./assets/substack.png";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -29,7 +31,7 @@ export default function Home() {
           <h2 className="text-[#D97858] text-2xl font-semibold mb-1">
             Join the waitlist
           </h2>
-          <p className="text-gray-400 text-sm mb-4">
+          <p className="text-[#F7F6F2] text-xs mb-4 whitespace-nowrap">
             Leave your email and we&apos;ll send you an invite when we launch the beta.
           </p>
 
@@ -39,33 +41,21 @@ export default function Home() {
             </p>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-              <div className="flex items-center bg-[#f5f0eb] rounded-lg px-4 py-3 gap-3">
-                <svg
-                  className="w-5 h-5 text-gray-400 shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={1.8}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                  />
-                </svg>
+              <div className="flex items-center bg-[#F4F1EB] border border-[#B1ADA5] rounded-lg px-4 py-3 gap-3">
+                <Image src={emailIcon} alt="email" className="w-5 h-5 shrink-0" />
                 <input
                   type="email"
                   placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="bg-transparent flex-1 text-gray-700 placeholder-gray-400 outline-none text-sm"
+                  className="input-email bg-transparent flex-1 outline-none text-sm"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#D97858] cursor-pointer hover:bg-[#a85a35] text-white font-semibold py-3 rounded-lg transition-colors"
+                className="btn-submit w-full bg-[#C15F3C] border border-[#D97858] cursor-pointer text-white py-3 rounded-lg"
               >
                 Submit
               </button>
@@ -79,17 +69,15 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="absolute bottom-6">
+      <footer className="absolute bottom-6 flex items-center gap-4">
         <a
-          href="https://x.com"
+          href="https://augle.substack.com"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="X / Twitter"
-          className="text-white opacity-70 hover:opacity-100 transition-opacity"
+          aria-label="Substack"
+          className="opacity-70 hover:opacity-100 transition-opacity"
         >
-          <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-          </svg>
+          <Image src={substackIcon} alt="Substack" className="w-6 h-6" />
         </a>
       </footer>
     </main>
