@@ -61,13 +61,11 @@ export default function Home() {
               </button>
             </form>
           )}
-
           <p className="text-[#F7F6F2] text-xs text-center mt-3">
             No spam, no sharing, no selling. Just your invite when we&apos;re ready.
           </p>
         </div>
       </div>
-
       {/* Footer */}
       <footer className="absolute bottom-6 flex items-center gap-4">
         <a
